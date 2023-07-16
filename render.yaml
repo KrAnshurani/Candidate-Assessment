@@ -1,0 +1,5 @@
+services:
+  - name: candidate-assessment-app
+    type: static
+    buildCommand: ng build --prod
+    publishDir: dist/candidate-assessment-app
