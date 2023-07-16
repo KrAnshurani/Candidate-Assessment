@@ -2,7 +2,7 @@
 .assessment_banner{width: calc(100% - 142px);background-color: #ffffff;margin-left: 20px;}
 aside{background-color: #ffffff;padding: 15px 19px;}
 aside nav ul{padding-left:0}
-aside nav ul li{text-align: center;list-style: none;font-size: 12px;padding: 16px;font-family: 'Inter', sans-serif;}
+aside nav ul li{text-align: center;list-style: none;font-size: 12px;padding: 15px;font-family: 'Inter', sans-serif;}
 aside nav ul li p{padding-top: 4px;}
 aside nav ul li:nth-child(4) svg{margin-top: 10px;}
 aside nav ul li svg path{fill:#1C4980;}
@@ -10,12 +10,13 @@ aside nav ul li:hover{color:#0073E6;background: #E5F1FC;border-radius: 4px;borde
 aside nav ul li:hover svg path{fill:#0073E6}
 aside nav ul li:hover p{color: #0073E6;}
 .dot{margin-left:12px}
-.menu_search{display:none}
+.menu_search,.hamburger_icon , .side_nav{display:none}
 aside nav ul li:nth-child(3){padding-bottom: 25px;}
 .admin{width: 47px;margin: 0 auto;border-radius: 16px; border: 1px solid #D63500 ;background-color:#FBEBEA ;color: #D63500;padding: 2px 5px;font-size: 10px;font-weight: 500;font-family: 'Inter', sans-serif;}
 .assessment_head {display: flex;align-items: center;border-bottom: 1px solid #DADCE0;}
 .assessment_head h1{color:#1C4980;padding:10px 20px;margin: 16px 0;font-size: 20px;font-family: 'Inter', sans-serif;border-right: 1px solid #DADCE0;}
-p.my_assess{font-size: 14px; padding: 20px;}
+p.my_assess , p.my_assess_un{font-size: 14px; padding: 20px;}
+.my_assess_un{display: none;}
 .my_assess:hover span{border-bottom: 3px solid #0073E6;padding-bottom: 28px;color: #0073E6;}
 .assessment_overview h2{font-size: 18px;padding: 20px;color:#1C4980;}
 .overview_content{    border: 1px solid #DADCE0;border-radius: 12px;margin: 20px;}
@@ -52,8 +53,9 @@ p.my_assess{font-size: 14px; padding: 20px;}
 .duration_cont{padding-right: 8px;}
 .duration_cont p{font-size: 12px;color:#1C4980;}
 .duration_share{display: flex;justify-content: space-between;padding-top: 15px;}
+.share_container{position: relative;}
 .share_container , .share_cont{display: flex;align-items: center;}
-.share_cont {border: 1px solid #1C4980;padding: 5px;border-radius: 50px;position: relative; margin-right: 60px;}
+.share_cont {border: 1px solid #1C4980;padding: 5px;border-radius: 50px; margin-right: 60px;}
 .share_content{border: 1px solid #1C4980;padding: 5px;border-radius: 50px;display: flex;}
 .profile_ft{padding: 6px;border-radius: 50%;color: #fff;font-size: 14px;background: #6548EE;margin-left: 10px;}
 .profile{background: #6548EE;position: absolute;right: 81px;padding: 6px;border-radius: 50%;color: #fff;font-size: 14px;}
@@ -87,7 +89,13 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
 
 
 
-@media (max-width:768px){
+@media (max-width:520px){
+    .assessment_head,.hamburger_icon,.side_nav{display: block;}
+    .assessment_head h1{border-right: none;}
+    .unstop_assessment, .my_assess_un{display: flex;}
+    .my_assess{display: none;}
+    .my_assess_un{margin-right:15px;}
+    p.my_assess_un:hover{border-bottom: 3px solid #0073E6;color: #0073E6;}
     .new_assessment_banner{flex-direction: column;}
     .add_assessment{width: 100%;padding: 20px;margin-bottom: 20px;}
     .add_assessment h3{font-size: 18px;}
@@ -111,12 +119,38 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
     .overview_content li:nth-child(4) {order: 2;width: 50%;}
     .total h3{font-size: 16px;}
     .total p{font-size: 10px;}
+    aside{display:none}
     .email,.attempted_candidate,.total_candidate{padding: 0 7px;}
     .new_head{display: flex;align-items: center;justify-content: space-between;}
     .menu_search{display: flex;align-items: center;padding-right: 20px;}
-    .menu_search div{margin-left: 20px;}
+    .menu_search div{margin-left: 10px;padding: 8px 10px;}
     .menu_search div svg:nth-child(3) path{fill: #1C4980;}
-    .menu_search div:hover{border-radius: 50px;border: 1px solid #0073E6;padding: 8px 10px;background: #E5F1FC;}
+    .menu_search div:hover{border-radius: 50px;border: 1px solid #0073E6;background: #E5F1FC;}
+    .sidenav_resp{display: flex;align-items: center;padding-left: 20px;}
+    .hamburger_icon{background:#F2F8FE;border-radius: 50px;padding: 8px;}
+    .side_nav{background-color: #ffffff;position: fixed;
+        top: 0;
+        left: 0;
+        width: 315px;
+        height: 100%;
+        background-color: #fff;
+        padding: 20px;
+        box-sizing: border-box;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        box-shadow: 0px -4px 50px 0px rgba(0, 0, 0, 0.09);
+    }
+        .side_nav.open {
+            transform: translateX(0);
+          }
+    .admin_menu{display: flex;}     
+    .side_nav ul li{display: flex;padding: 20px 10px; }
+    .side_nav ul li:nth-child(3){border-bottom: 1px dashed #DADCE0;}
+    .side_nav ul li p{padding-left: 5px;font-size: 14px;}
+    .side_nav ul li.close_menu{justify-content: space-between;align-items: center;}
+    .admin{margin-left: 78px;}
+    .side_nav ul li:hover{color:#0073E6;background: #E5F1FC;border-radius: 10px;border: 1px solid #0073E6;}
+    .assessment_overview h2{display: none;}
 }
 
 

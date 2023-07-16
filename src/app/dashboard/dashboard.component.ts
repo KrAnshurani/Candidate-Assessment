@@ -28,5 +28,6 @@ export class DashboardComponent {
   hidePopup(): void {
     this.isVisible = false;
   }
-
+  isSidenavOpen = false;
+ 
 }
