@@ -58,22 +58,22 @@ p.my_assess , p.my_assess_un{font-size: 14px; padding: 20px;}
 .share_cont {border: 1px solid #1C4980;padding: 5px;border-radius: 50px; margin-right: 60px;}
 .share_content{border: 1px solid #1C4980;padding: 5px;border-radius: 50px;display: flex;}
 .profile_ft{padding: 6px;border-radius: 50%;color: #fff;font-size: 14px;background: #6548EE;margin-left: 10px;}
-.profile{background: #6548EE;position: absolute;right: 81px;padding: 6px;border-radius: 50%;color: #fff;font-size: 14px;}
-.profile_2{position: absolute;background-color: #3079E1;right: 67px;padding: 6px;border-radius: 50%;color: #fff;font-size: 14px;}
-.profile_3{position: absolute;background-color: #E9407A;right: px;padding: 6px;border-radius: 50%;color: #fff;font-size: 14px;}
+.profile{background: #6548EE;position: absolute;right: 22px;padding: 6px;border-radius: 50%;color: #fff;font-size: 14px;}
+.profile_2{position: absolute;background-color: #3079E1;right: 10px;padding: 6px;border-radius: 50%;color: #fff;font-size: 14px;}
+.profile_3{position: absolute;background-color: #E9407A;right:-1px;padding: 6px;border-radius: 50%;color: #fff;font-size: 14px;}
 .create_head{display: flex; justify-content: space-between;align-items: center;border-bottom: 1px solid #DADCE0;}        
 .create_head h1{font-size: 20px;padding:20px 30px;}
 .create_head svg{margin-right: 20px;cursor: pointer;}
-.create_assessment{transition: transform 0.3s ease-in-out;display: none;max-width: 596px;height: auto;position: fixed;top: 50%;left: 50%;transform: translate(100%);box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);}
+.create_content{transition: transform 0.3s ease-in-out;display: none;max-width: 596px;height: auto;position: fixed;top: 50%;left: 50%;transform: translate(-50% , -50%);box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);}
 form{padding: 20px 30px 5px 30px;}
 select{-webkit-appearance: none;-moz-appearance: none;appearance: none; background-image: url("src/assets/keyboard_arrow_down.svg");background-repeat: no-repeat;background-position: right center;}
-.create_assessment input , .create_assessment select {width: 531px;padding: 15px;border-radius: 8px;border: 1px solid #DADCE0;margin: 15px 0;}
-.create_assessment textarea{margin-top: 15px;width: 531px;padding: 15px;border-radius: 8px 8px 0 0;border: 1px solid #DADCE0;resize: none;}
+.create_content input , .create_content select {width: 531px;padding: 15px;border-radius: 8px;border: 1px solid #DADCE0;margin: 15px 0;}
+.create_content textarea{margin-top: 15px;width: 531px;padding: 15px;border-radius: 8px 8px 0 0;border: 1px solid #DADCE0;resize: none;}
 select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
 .skills{position: relative;}
 .skills input[type=text]{position: absolute;left: 0;bottom:-58px;border-top: none;border-radius: 0px 0px 8px 8px;}
 .desc{margin-top: 57px;}
-.create_assessment .submit{width: 531px;padding:10px 30px;background-color: #0073E6;border: none;color: #ffffff;border-radius: 8px;}
+.create_content .submit{width: 531px;padding:10px 30px;background-color: #0073E6;border: none;color: #ffffff;border-radius: 8px;}
 ::ng-deep input[type="time"] {appearance: none;-webkit-appearance: none;-moz-appearance: none;}
 ::ng-deep input[type="time"]::-webkit-calendar-picker-indicator {display: none;}
 .skills .skills_list {display: flex;position: absolute;top: 51px;left: 16px;}
@@ -81,11 +81,14 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
 .skills_list p , .skills_list_ft p{font-size: 12px;display: flex;align-items: center;border-radius:22px;background:#DDEDFF;padding: 4px 8px 6px 10px; margin-right: 10px;}
 .skills_list p span , .skills_list_ft p span{padding: 2px 0 0 4px;}
 .submit_form{border-radius: 0px 0px 8px 8px;padding: 20px 30px;width: 596px;background: #FFF;box-shadow: 0px -4px 50px 0px rgba(0, 0, 0, 0.09);}
-.visible{display: block;border-radius: 8px;transform: translateY(0);}
+.visible{display: block;border-radius: 8px;}
+/* .create_assessment{background-color:#000;opacity: 0.4;} */
 .create_content{background: #fff;}
 .share_container span{display: none;}
 .assessment:nth-child(4),.assessment:nth-child(5){display: none;}
-
+.popup-open {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
 
 
@@ -151,6 +154,7 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
     .admin{margin-left: 78px;}
     .side_nav ul li:hover{color:#0073E6;background: #E5F1FC;border-radius: 10px;border: 1px solid #0073E6;}
     .assessment_overview h2{display: none;}
+    .create_content{display: none;}
 }
 
 
