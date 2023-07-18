@@ -35,4 +35,19 @@ export class DashboardComponent {
   }
   isSidenavOpen = false;
    
+  isDivHidden: boolean = true;
+
+  toggleDiv() {
+    this.isDivHidden = !this.isDivHidden;
+  }
+
+
+  isPopupDetailSec:boolean = false;
+  showSectionPopup(){
+    this.isPopupDetailSec = !this.isPopupDetailSec;
+  }
+
+  closehidePopup(){
+    this.isPopupDetailSec = false;
+  }
 }

@@ -110,6 +110,7 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
     .unstop_assessment, .my_assess_un{display: flex;}
     .my_assess{display: none;}
     .my_assess_un{margin-right:15px;}
+    .assessment_banner{margin-left: 0;}
     p.my_assess_un:hover{border-bottom: 3px solid #0073E6;color: #0073E6;}
     .new_assessment_banner{flex-direction: column;}
     .add_assessment{width: 100%;padding: 20px;margin-bottom: 20px;}
@@ -126,6 +127,17 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
     .profile_3{right:33px;}
     .share_container span{display: flex;font-size: 12px;color: #1C4980;}
     .assessment:nth-child(4),.assessment:nth-child(5){display: block;}
+  
+    .overview_content{position: relative;
+        transition: 0.9s ease-in-out;
+        /* animation: slideInFromBottom 0.6s ease-in-out; */
+        /* transform: translateY(100%); */
+        animation: slideToTop 0.9s ease-in-out;
+    }
+    
+   
+
+
     .overview_content ul{flex-wrap: wrap;}
     .overview_content ul li{padding: 10px;}
     .overview_content li:nth-child(3) {order: 4;border-top: 1px solid #DADCE0;border-right: none!important; width: 100%;}
@@ -134,7 +146,7 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
     .overview_content li:nth-child(4) {order: 2;width: 50%;}
     .total h3{font-size: 16px;}
     .total p{font-size: 10px;}
-    aside{display:none}
+    aside ,.hidden{display:none}
     .email,.attempted_candidate,.total_candidate{padding: 0 7px;}
     .new_head{display: flex;align-items: center;justify-content: space-between;}
     .menu_search{display: flex;align-items: center;padding-right: 20px;}
@@ -143,7 +155,7 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
     .menu_search div:hover{border-radius: 50px;border: 1px solid #0073E6;background: #E5F1FC;}
     .sidenav_resp{display: flex;align-items: center;padding-left: 20px;}
     .hamburger_icon{background:#F2F8FE;border-radius: 50px;padding: 8px;}
-    .side_nav{background-color: var( -white);position: fixed;top: 0;left: 0;width: 315px;height: 100%;background-color: #fff;padding: 20px;box-sizing: border-box;transform: translateX(-100%);transition: transform 0.3s ease-in-out;box-shadow: 0px -4px 50px 0px rgba(0, 0, 0, 0.09);}
+    .side_nav{position: fixed;top: 0;left: 0;width: 315px;height: 100%;background-color: #ffffff;padding: 20px;box-sizing: border-box;transform: translateX(-100%);transition: transform 0.3s ease-in-out;box-shadow: 0px -4px 50px 0px rgba(0, 0, 0, 0.09);}
     .side_nav.open {transform: translateX(0);}
     .admin_menu{display: flex;}     
     .side_nav ul li{display: flex;padding: 20px 10px; }
@@ -153,7 +165,16 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
     .admin{margin-left: 78px;}
     .side_nav ul li:hover{color:#0073E6;background: #E5F1FC;border-radius: 10px;border: 1px solid #0073E6;}
     .assessment_overview h2{display: none;}
-    .create_content{display: none;}
+    .create_content, .hiddenpopup{display: none;}
+    .side_nav ul li.close_menu:hover{border: none;background: none;}
+    /* .total{justify-content: space-between;} */
+    .sub_section_modal.detailsec {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    /* .sub_section_modal{} */
+    .sub_section_content{background-color: #fff;}
+      
 }
 
 
