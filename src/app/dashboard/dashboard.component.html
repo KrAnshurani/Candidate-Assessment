@@ -528,17 +528,17 @@
     </div>
     </div>
 </div>
-<!-- POPUP -->
+<!-- CREATE NEW POPUP -->
 <div class="create_assessment" >
     <div class="create_content" [class.visible]="isVisible">
     <div class="create_head">
-       <h1>Create new assessment </h1> 
+       <h1>Create New Assessment</h1> 
        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" (click)="hidePopup()">
         <path d="M20.3033 22.071L15 16.7677L9.6967 22.071L7.92893 20.3033L13.2322 15L7.92893 9.69668L9.6967 7.92891L15 13.2322L20.3033 7.92891L22.0711 9.69668L16.7678 15L22.0711 20.3033L20.3033 22.071Z" fill="#323232"/>
       </svg>
     </div>
     <form>
-        <label for="name">Name of assessment</label>
+        <label>Name of assessment</label>
         <input type="text" placeholder="Type Here">
         <label for="purpose">Purpose of the test is</label>
         <select name="test" id="test-type">
@@ -552,7 +552,7 @@
             <option value="desc2">Select</option>
         </select>
         <div class="skills">
-        <label for="textareaField">Skills</label>
+        <label >Skills</label>
             <div class="skills_list">
        <p> UI/UX and Design <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <g clip-path="url(#clip0_0_1702)">
@@ -586,8 +586,8 @@
                   </clipPath>
                 </defs>
               </svg></span></p>
-            </div>
-              <div class="skills_list_ft">
+            <!-- </div> -->
+              <!-- <div class="skills_list_ft"> -->
             <p>UI/UX and Design <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
                 <g clip-path="url(#clip0_0_1702)">
                   <path d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z" fill="#1C4980"/>
@@ -621,6 +621,100 @@
     </form>
         <div class="submit_form">
         <button class="submit">Save</button>
+    </div>
+    </div>
+   
+  </div>
+
+  <!-- SUB SECTION POPUP  -->
+  <div class="sub_section_modal">
+    <div class="sub_section_content" >
+    <div class="create_head">
+       <h1>Sub-section Details </h1> 
+       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" (click)="hidePopup()">
+        <path d="M20.3033 22.071L15 16.7677L9.6967 22.071L7.92893 20.3033L13.2322 15L7.92893 9.69668L9.6967 7.92891L15 13.2322L20.3033 7.92891L22.0711 9.69668L16.7678 15L22.0711 20.3033L20.3033 22.071Z" fill="#323232"/>
+      </svg>
+    </div>
+    <form>
+        <label>Name of assessment</label>
+        <input type="text" placeholder="Type Here">
+        <label for="purpose">Purpose of the test is</label>
+        <select name="test" id="test-type">
+
+            <option value="test1">Select </option>
+            <option value="test2">Select</option>
+        </select>
+        <label>Description</label>
+        <select name="description" id="desc-type">
+            <option value="desc1">Select</option>
+            <option value="desc2">Select</option>
+        </select>
+        <div class="skills">
+        <label>Skills</label>
+            <div class="skills_list">
+       <p> UI/UX and Design <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <g clip-path="url(#clip0_0_1702)">
+                  <path d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z" fill="#1C4980"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_0_1702">
+                    <rect width="18" height="18" rx="9" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg></span></p>
+           
+            <p>No of Question<span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <g clip-path="url(#clip0_0_1702)">
+                  <path d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z" fill="#1C4980"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_0_1702">
+                    <rect width="18" height="18" rx="9" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg></span></p>
+
+            <p>Web Development <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <g clip-path="url(#clip0_0_1702)">
+                  <path d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z" fill="#1C4980"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_0_1702">
+                    <rect width="18" height="18" rx="9" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg></span></p>
+            <!-- </div> -->
+              <!-- <div class="skills_list_ft"> -->
+            <p>UI/UX and Design <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <g clip-path="url(#clip0_0_1702)">
+                  <path d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z" fill="#1C4980"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_0_1702">
+                    <rect width="18" height="18" rx="9" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg></span></p>
+            
+            <p>Web Development <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <g clip-path="url(#clip0_0_1702)">
+                  <path d="M14.25 4.8075L13.1925 3.75L9 7.9425L4.8075 3.75L3.75 4.8075L7.9425 9L3.75 13.1925L4.8075 14.25L9 10.0575L13.1925 14.25L14.25 13.1925L10.0575 9L14.25 4.8075Z" fill="#1C4980"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_0_1702">
+                    <rect width="18" height="18" rx="9" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg></span></p>
+            </div>
+        <textarea id="textareaField" name="textareaField" rows="8">
+        </textarea>
+        <input type="text" placeholder="Type here">
+    </div>
+    </form>
+        <div class="submit_form">
+        <button class="next">Next</button>
     </div>
     </div>
    
