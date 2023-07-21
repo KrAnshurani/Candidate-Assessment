@@ -22,17 +22,7 @@ export class DashboardComponent {
       this.time = '';
     }
   }
-  isVisible: boolean = false;
 
-  showPopup(): void {
-    this.isVisible = true;
-    this.renderer.addClass(document.body, 'popup-open');
-  }
-
-  hidePopup(): void {
-    this.isVisible = false;
-    this.renderer.removeClass(document.body, 'popup-open');
-  }
   isSidenavOpen = false;
    
   isDivHidden: boolean = true;
@@ -41,13 +31,28 @@ export class DashboardComponent {
     this.isDivHidden = !this.isDivHidden;
   }
 
+  // CREATE
+  isPopupVisible = false;
 
-  isPopupDetailSec:boolean = false;
-  showSectionPopup(){
-    this.isPopupDetailSec = !this.isPopupDetailSec;
+  showPopup() {
+    this.isPopupVisible = true;
   }
 
-  closehidePopup(){
-    this.isPopupDetailSec = false;
+  closePopup() {
+    this.isPopupVisible = false;
   }
+
+
+  // SUB SECTION
+  isPopupAvailable = false;
+
+  showSection() {
+    this.isPopupAvailable = true;
+  }
+
+  hidePopup() {
+    this.isPopupAvailable = false;
+  }
+
+
 }
