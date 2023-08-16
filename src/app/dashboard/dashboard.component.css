@@ -95,21 +95,13 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
 .skills_list p span {padding: 2px 0 0 4px;}
 .submit_form{border-radius: 0px 0px 8px 8px;padding: 20px 30px;background: #ffffff;box-shadow: 0px -4px 50px 0px rgba(0, 0, 0, 0.09);}
 .sub_section_content .submit_form{border-radius: 0px 0px 8px 8px;padding: 20px 30px;background: var( -white);box-shadow: 0px -4px 50px 0px rgba(0, 0, 0, 0.09);padding: 15px;margin-top: 39px;}
-/* .create_assessment{background-color:#000;opacity: 0.4;} */
-.create_content{background: #fff;}
 .share_container span{display: none;}
 .assessment:nth-child(4),.assessment:nth-child(5),.assessment:nth-child(6),.assessment:nth-child(7){display: none;}
 .create_assessment{display: none;position: fixed;z-index: 9999;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);}
 .create_assessment.show{display: block;}
-.create_content{background-color: #fefefe;margin: 20px auto;border: 1px solid #888;width: 596px;border-radius: 8px 8px 0 0;}
-.create_assessment.show{display:none}
-
-
-
-
-
-
-
+.create_content{background-color: #fefefe;margin: 20px auto;border: 1px solid #888;width: 596px;border-radius: 8px;}
+.three_dot{cursor: pointer;}
+/* .create_assessment.show{display:none} */
 
 
 
@@ -175,6 +167,7 @@ select:focus-visible,textarea:focus-visible,input:focus-visible{outline: none;}
     .sub_section_content{background-color: #ffffff;margin: 20px auto;border: 1px solid #888;width: 375px;border-radius: 8px 8px 0 0;transition: transform 0.5s;}
     .sub_section_modal.showSection{display: block; transform: translateY(0);}
     .sub_section_modal.close{transform: translateY(-100%);}
+    .create_assessment.show{display:none}
 }
 
 
